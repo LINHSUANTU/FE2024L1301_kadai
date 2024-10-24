@@ -17,19 +17,19 @@
     <div id="app" class="row">
         <div id="number_area" class="col-md-4">
             <!-- 見出しh5で「現在の数：0」を表示する　※0は初期値、計算後は計算結果の値 -->
-            
+            <h2>現在の数：{{ count }}</h2>
             計算用の数<input type="number" v-model.number="inNumber" class="form-control">
         </div>
         <div id="btn_area" >
             <!-- たす、ひく、かける、わるボタンを表示する、クリック時に対応するメソッドを呼び出す
                  classには「btn btn-primary」を設定する -->
-            
-            
-            
-            
+                    <button @click="tasu" class="btn btn-primary">たす</button>
+                    <button @click="hiku" class="btn btn-primary">ひく</button>
+                    <button @click="kake" class="btn btn-primary">かける</button>
+                    <button @click="waru " class="btn btn-primary">わる</button> 
             <!-- リセットボタンを表示する、クリック時に対応するメソッドを呼び出す
                  classには「btn btn-secondary」を設定する -->
-            
+                 <button @click="reset" class="btn btn-secondary">リセット</button>
             <p>リセットは現在の数と計算用の数の両方をリセットします</p>
         </div>
         <div id="image_area">
