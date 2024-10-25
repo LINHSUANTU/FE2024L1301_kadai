@@ -30,6 +30,7 @@ new Vue({
         reset() {
             this.count =0;
             this.inNumber = 1;
+            this.imageChange();
         },
         imageChange() {
             //HTMLからimage_areaの情報を取得する
